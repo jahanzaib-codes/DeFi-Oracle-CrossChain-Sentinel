@@ -1,0 +1,52 @@
+# Rust & Cargo Build Artifacts
+target/
+**/*.rs.bk
+Cargo.lock
+
+# Foundry & Smart Contract Artifacts
+out/
+cache/
+broadcast/
+lib/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env.local
+.env.*.local
+
+# Sensitive Keys & Environment Variables
+.env
+*.pem
+*.key
+
+# Testing & Coverage (Strictly block test artifacts and test folders from public repo)
+tests/
+test/
+.pytest_cache/
+.coverage
+htmlcov/
+coverage/
+lcov.info
+
+# IDEs & System Files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs & Telemetry
+logs/
+*.log
+*.log.*
+data/

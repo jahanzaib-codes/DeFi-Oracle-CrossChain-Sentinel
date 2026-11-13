@@ -1,0 +1,18 @@
+[package]
+name = "arbitrum-stylus-sentinel"
+version = "1.0.0"
+edition = "2021"
+authors = ["Jahanzaib <@jahanzaib-codes>"]
+description = "High-performance Arbitrum Stylus Rust smart contract for low-latency DeFi liquidation math"
+
+[dependencies]
+stylus-sdk = "0.6.0"
+alloy-primitives = "=0.7.6"
+alloy-sol-types = "=0.7.6"
+
+[features]
+export-abi = ["stylus-sdk/export-abi"]
+
+[lib]
+crate-type = ["lib", "cdylib"]
+path = "src/stylus/src/lib.rs"
