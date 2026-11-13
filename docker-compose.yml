@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  oracle-sentinel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: defi-oracle-sentinel
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ARBITRUM_RPC_URL=${ARBITRUM_RPC_URL:-https://arb1.arbitrum.io/rpc}
+      - BASE_RPC_URL=${BASE_RPC_URL:-https://mainnet.base.org}
+    volumes:
+      - ./logs:/app/logs
+    command: ["demo"]
